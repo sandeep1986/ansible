@@ -1,0 +1,10 @@
+---
+#tasks file for linux
+  - name: Linux Ping
+    ping:
+    register: LinPingResult
+    ignore_unreachable: yes
+    ignore_errors: yes
+
+  - debug: var=LinPingResult
+    ignore_errors: yes

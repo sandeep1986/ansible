@@ -1,0 +1,14 @@
+
+pipeline{
+    agent any
+    stages
+    {
+        stage('Trigger playbook')
+        {
+            steps
+            {
+                sh "ansible-playbook /root/linux_health/main.yml -i /root/linux_health/inventory/hosts"
+                    }
+        }
+    }
+}
